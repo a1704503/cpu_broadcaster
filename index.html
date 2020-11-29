@@ -58,6 +58,7 @@
 
         const { model, speed, freeMem, totalMem } = messageObject //destructuring
 
+        console.log(message.destinationName + message.payloadString)
 
         document.getElementById("processor").value = model
         document.getElementById("speed").value = speed
