@@ -1,0 +1,23 @@
+{
+  "name": "cpu_broadcaster",
+  "version": "1.0.0",
+  "description": "Broadcast cpu info to mqtt broker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a1704503/cpu_broadcaster.git"
+  },
+  "author": "a1704503",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/a1704503/cpu_broadcaster/issues"
+  },
+  "homepage": "https://github.com/a1704503/cpu_broadcaster#readme",
+  "dependencies": {
+    "mqtt": "^4.2.6",
+    "node-modules": "^1.0.1"
+  }
+}
