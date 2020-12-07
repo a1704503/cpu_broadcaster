@@ -50,13 +50,15 @@
         topic = '/cpu-broadcaster/test'
         client.subscribe(topic)
     }
+
+
     function onMessageArrived(message) {
 
         // Forcing incoming data to object
         mes = message.payloadString.toString()
         messageObject = JSON.parse(mes)
 
-        const { model, speed, freeMem, totalMem } = messageObject //destructuring
+        let { model, speed, freeMem, totalMem } = messageObject //destructuring
 
         console.log(message.destinationName + message.payloadString)
 
@@ -68,6 +70,8 @@
         //console.log(model)
         //document.getElementById("messages").innerHTML += '<span>Topic: ' + message.destinationName + '  | ' + message.payloadString + '</span><br/>';
     }
+
+
 </script>
 
 </html>

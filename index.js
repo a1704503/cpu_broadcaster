@@ -8,16 +8,20 @@ let start = 0
 let end = 10000
 
 // Data from os library
-const [{ model, speed }] = os.cpus()
-const freeMem = os.freemem()
-const totalMem = os.totalmem()
+let [{ model, speed }] = os.cpus()
+let freeMem = os.freemem()
+let totalMem = os.totalmem()
 
 // Callback function, where broadcasting msg every 1,5seconds
 let intervalFunction = function () {
 
-    //
+
     if (start < end) {
         start++
+
+        [{ model, speed }] = os.cpus()
+        freeMem = os.freemem()
+        totalMem = os.totalmem()
 
         osLog()
         console.log("Packet nro: " + start)
@@ -40,4 +44,6 @@ let sendingInterval = setInterval(intervalFunction, 1500)
 
 function osLog() {
     console.log(os.cpus())
+    console.log(os.freemem()) //test
+    console.log(os.totalmem())
 }
